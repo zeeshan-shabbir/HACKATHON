@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- firebase -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+    <script>
+        var firebaseConfig = {
+            apiKey: "AIzaSyCQQgU6lOFKPXXS5o0-KWeQOd9fIEFLBek",
+            authDomain: "hackathon-3b2ab.firebaseapp.com",
+            projectId: "hackathon-3b2ab",
+            storageBucket: "hackathon-3b2ab.appspot.com",
+            messagingSenderId: "893656612321",
+            appId: "1:893656612321:web:faeb48b03230fc08a826a0",
+            measurementId: "G-0DD0XD0C16"
+        };
+        firebase.initializeApp(firebaseConfig);
+    </script>
+    <link rel="stylesheet" href="../../css folder/Style.css">
+    <link rel="stylesheet" href="../../css folder/utilities.css ">
+    <link rel="stylesheet" href="./showProduct.css">
+    <title>show product</title>
+</head>
+
+<body>
+
+    <div class="breadcrump flex align-center justify-between">
+        <ul class="breadcrump-list flex capitalize">
+            <li class="breadCrump-item">
+                <a href="../../userPage/user.html" class="breadCrump-link">home &nbsp;</a>
+            </li>
+            <li class="breadCrump-item">
+                <a href="javascript:avoid(0)" class="breadCrump-name">resturants &nbsp;</a>
+            </li>
+            <li class="breadCrump-item">
+                <p class="breadCrump-name">resturant name &nbsp;</p>
+
+            </li>
+        </ul>
+        <div class="Cart">
+            <span class="badge">
+                0
+            </span>
+            <i class="fa fa-shopping-cart fa-lg"></i>
+        </div>
+        <div class="breadlogo">
+            <h1>logo</h1>
+        </div>
+
+    </div>
+
+
+
+    <section class="productWrapper">
+
+        <div class="res-h1">
+            <h1>Resutrant</h1>
+        </div>
+        <div class="resturants flex align-center justify-between flexwrap capitalize center" id="showProduct">
+            <div class="showCard">
+                <div class="resImg">
+                    <img src="../../assets/images/resturants/pexels-quark-studio-3201920.jpg" alt=""
+                        onclick="showProductsPage()">
+                </div>
+                <div class="resCardBody">
+                    <div>
+                        <h1>resturant name</h1>
+                    </div>
+                    <div>
+                        <h2>catogery</h2>
+                    </div>
+                    <div class="disheName">
+                        <span>chinease</span> <span class="price">100rs</span>
+                    </div>
+                    <div class="flex align-center justify-evenly">
+                        <div class="order">
+                            <button class="btn">order now</button>
+                        </div>
+                        <button class="btn">
+                            <span>
+                                add to
+                            </span>
+                            <i class="fa fa-shopping-cart fa-lg"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="./showProduct.js"></script>
+</body>
+
+</html>

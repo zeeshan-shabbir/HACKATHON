@@ -1,0 +1,26 @@
+
+*{
+    box-sizing: border-box;
+}
+
+.orderSection{
+    margin-top: 10rem;
+}
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+  }
+table {
+    border-spacing: 0;
+    width: 100%;
+    border: 1px solid #ddd;
+  }
+  
+  th, td {
+    text-align: left;
+    padding: 16px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }

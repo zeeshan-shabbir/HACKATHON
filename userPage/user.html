@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css folder/Style.css">
+    <link rel="stylesheet" href="../css folder/utilities.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+
+    <script>
+        var firebaseConfig = {
+            apiKey: "AIzaSyCQQgU6lOFKPXXS5o0-KWeQOd9fIEFLBek",
+            authDomain: "hackathon-3b2ab.firebaseapp.com",
+            projectId: "hackathon-3b2ab",
+            storageBucket: "hackathon-3b2ab.appspot.com",
+            messagingSenderId: "893656612321",
+            appId: "1:893656612321:web:faeb48b03230fc08a826a0",
+            measurementId: "G-0DD0XD0C16"
+        };
+        firebase.initializeApp(firebaseConfig);
+    </script>
+    <title>user</title>
+</head>
+
+<body>
+    <header>
+        <div class="container capitalize">
+            <nav class="flex align-item justify-between">
+                <div class="log0">
+                    <h1>logo</h1>
+                </div>
+                <ul class="flexallcenter">
+                    <li class="nav-item">
+                        <a href="" class="nav-link">home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="" class="nav-link">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./showOrder/showOrder.html" class="nav-link">Order</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="" class="nav-link">services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="" class="nav-link">contact</a>
+                    </li>
+                </ul>
+                <div class="icons flexallcenter">
+                    <div class="Cart">
+                        <span class="badge">
+                            0
+                        </span>
+                        <i class="fa fa-shopping-cart fa-lg"></i>
+                    </div>
+                    <div>
+                        <i class="fa fa-user fa-lg"></i>
+                    </div>
+                    <div onclick="signOut()">
+                        <i class="fa fa-arrow-right fa-lg"></i>
+                    </div>
+
+                </div>
+            </nav>
+        </div>
+
+    </header>
+    <!-- header end here -->
+    <div class="slide">
+        <div class="slide-content-user">
+            <div class="flexallcenter searchDiv">
+                <input type="search" placeholder="search resutrant/dishes" id="search">
+                <label for="search">search</label>
+            </div>
+        </div>
+    </div>
+    <section class="resturantWrapper">
+        <div class="res-h1">
+            <h1>Resutrant</h1>
+        </div>
+        <div class="resturants flex align-center justify-between flexwrap capitalize center" id="showResturant">
+
+
+
+        </div>
+    </section>
+    <script src="./user.js"></script>
+</body>
+
+</html>

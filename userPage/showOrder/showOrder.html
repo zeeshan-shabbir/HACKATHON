@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <!-- firebase -->
+     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+     <script>
+         var firebaseConfig = {
+             apiKey: "AIzaSyCQQgU6lOFKPXXS5o0-KWeQOd9fIEFLBek",
+             authDomain: "hackathon-3b2ab.firebaseapp.com",
+             projectId: "hackathon-3b2ab",
+             storageBucket: "hackathon-3b2ab.appspot.com",
+             messagingSenderId: "893656612321",
+             appId: "1:893656612321:web:faeb48b03230fc08a826a0",
+             measurementId: "G-0DD0XD0C16"
+         };
+         firebase.initializeApp(firebaseConfig);
+     </script>
+    <link rel="stylesheet" href="../../css folder/Style.css">
+    <link rel="stylesheet" href="../../css folder/utilities.css">
+    <link rel="stylesheet" href="./showOrder.css">
+    <title>orders</title>
+</head>
+<body>
+       <div class="breadcrump flex align-center justify-between">
+           <ul class="breadcrump-list flex capitalize">
+               <li class="breadCrump-item">
+                   <a href="../../userPage/user.html" class="breadCrump-link">home &nbsp;</a>
+               </li>
+               <li class="breadCrump-item">
+                   <a href="javascript:avoid(0)" class="breadCrump-name">userName &nbsp;</a>
+               </li>
+               <li class="breadCrump-item">
+                   <p class="breadCrump-name">Orders  &nbsp;</p>
+               </li>
+           </ul>
+       </div>
+
+   <section class="orderSection">
+       <div class="container" id="showOrderDiv">
+      
+       </div>
+   </section>
+   <script src="./showOrder.js"></script>
+</body>
+</html>

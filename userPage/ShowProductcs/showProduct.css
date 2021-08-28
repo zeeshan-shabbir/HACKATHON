@@ -1,0 +1,28 @@
+
+.productWrapper{
+    margin-top: 9rem;
+}
+.showCard{
+    position: relative;
+    height: 100%;
+    width: 30rem;
+    margin: 2rem 0;
+    padding-bottom: 2rem;
+    color:white;
+    border-radius: 1rem;
+    overflow: hidden !important;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+
+}
+.showCard:hover{
+    transition: all .3s ease;
+    transform: scale(1.04);
+    
+}
+.breadlogo{
+    margin-right: 10rem;
+    font-size: 1.5rem !important;
+    text-transform: capitalize;
+    font-weight: lighter;
+    
+}

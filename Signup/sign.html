@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- firebase -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+    <script>
+        var firebaseConfig = {
+            apiKey: "AIzaSyCQQgU6lOFKPXXS5o0-KWeQOd9fIEFLBek",
+            authDomain: "hackathon-3b2ab.firebaseapp.com",
+            projectId: "hackathon-3b2ab",
+            storageBucket: "hackathon-3b2ab.appspot.com",
+            messagingSenderId: "893656612321",
+            appId: "1:893656612321:web:faeb48b03230fc08a826a0",
+            measurementId: "G-0DD0XD0C16"
+        };
+        firebase.initializeApp(firebaseConfig);
+    </script>
+    <!-- firebase end -->
+    <link rel="stylesheet" href="./sign.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>sign in</title>
+
+
+</head>
+
+<body>
+    <div class="container">
+
+
+        <div id="wrapper" class="capitalize">
+            <div class="regWrapper center">
+                <p class="rbtn" onclick="rbtn()">
+                    <i class="fa fa-arrow-right fa-lg"></i>
+                    
+                </p>
+                <h1>register</h1>
+                <form onsubmit="register(event)">
+                    <div class="txt_field feild2">
+                        <input type="text" id="regname" required>
+                        <span></span>
+                        <label for="regname">
+                            name:
+                        </label>
+                    </div>
+                    <div class="txt_field feild1">
+                        <input type="email" id="regemail" required>
+                        <span></span>
+                        <label for="useremail">
+                            email:
+                        </label>
+                    </div>
+                    <div class="txt_field feild1">
+                        <input type="password" id="regpassword" required>
+                        <span></span>
+                        <label for="regnpassword">
+                            password:
+                        </label>
+                    </div>
+                    <div class="txt_field feild1">
+                        <input type="number" id="regnumber" required>
+                        <span></span>
+                        <label for="regnumber">
+                            number:
+                        </label>
+                    </div>
+                    <div class="txt_field feild1">
+                        <input type="text" id="regcountry" required>
+                        <span></span>
+                        <label for="regcountry">
+                            country:
+                        </label>
+                    </div>
+                    <div class="txt_field feild1">
+                        <input type="text" id="regcity" required>
+                        <span></span>
+                        <label for="regcity">
+                            city:
+                        </label>
+                    </div>
+                    <div id="Rerror">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, illum.
+                    </div>
+                    <div class="Rbtn">
+                        <input type="submit" value="Register" >
+                    </div>
+
+                </form>
+            </div>
+            <div class="login center">
+                <a href="../Home/index.html" class="homebtn">
+                    <i class="fa fa-home"></i>
+                    <span class="home">home</span> 
+                </a>
+                <h1>Login</h1>
+                <form onsubmit="return false">
+                    <div class="txt_field feild1">
+                        <input type="email" id="useremail" required>
+                        <span></span>
+                        <label for="useremail">
+                            Email:
+                        </label>
+                    </div>
+                    <div class="txt_field feild1">
+                        <input type="password" id="userpassword" required>
+                        <span></span>
+                        <label for="userid">
+                            Password:
+                        </label>
+                    </div>
+                    <div id="error">
+
+                    </div>
+                    <div class="pass">Forgot Password?</div>
+                    <div class="loginbtn">
+                        <div id="loader"></div>
+                        <input type="submit" value="sign in" onclick="login()">
+                    </div>
+                    <div class="signup_link">
+                        Not a member? <span onclick="signupPage()">Signup</span>
+                    </div>
+                    <div class="regDiv">
+                        <input type="button" value="register resturant" class="regbtn" onclick="regPage()">
+                    </div>
+
+                </form>
+            </div>
+
+            <div class="signup center">
+                <p class="sbtn" onclick="sbtn()">
+                    <i class="fa fa-arrow-left fa-lg"></i>
+                    
+                </p>
+                <h1>sigup</h1>
+                <form onsubmit="signup(event)">
+                    <div class="txt_field feild2">
+                        <input type="text" id="Susername" required>
+                        <span></span>
+                        <label for="username">
+                            name:
+                        </label>
+                    </div>
+                    <div class="txt_field feild1">
+                        <input type="email" id="Suseremail" required>
+                        <span></span>
+                        <label for="Suseremail">
+                            email:
+                        </label>
+                    </div>
+                    <div class="txt_field feild1">
+                        <input type="password" id="Suserpassword" required>
+                        <span></span>
+                        <label for="Suserpassword">
+                            password:
+                        </label>
+                    </div>
+                    <div class="txt_field feild1">
+                        <input type="number" id="Susernumber" required>
+                        <span></span>
+                        <label for="Susernumber">
+                            number:
+                        </label>
+                    </div>
+                    <div class="txt_field feild1">
+                        <input type="text" id="Susercountry" required>
+                        <span></span>
+                        <label for="Susercountry">
+                            country:
+                        </label>
+                    </div>
+                    <div class="txt_field feild1">
+                        <input type="text" id="Susercity" required>
+                        <span></span>
+                        <label for="Susercity">
+                            city:
+                        </label>
+                    </div>
+
+                    <div id="Serror">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, illum.
+                    </div>
+                    <div class="loginbtn">
+                        <input type="submit" value="sign up">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    </div>
+
+ 
+
+    <script src="./sign.js"></script>
+
+</body>
+
+</html>
